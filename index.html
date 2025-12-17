@@ -9,11 +9,11 @@
 
   <body style="margin: 0; overflow: hidden;">
     <a-scene
-      mindar-image="imageTargetSrc: targets(7).mind;"
-      vr-mode-ui="enabled: false"
-      device-orientation-permission-ui="enabled: true"
-      embedded
-      renderer="colorManagement: true; physicallyCorrectLights">
+      id="arScene"
+      mindar-image="imageTargetSrc: target(7).mind; filterMinCF:10000000; filterBeta:1000; warmupTolerance:0; missTolerance:500;" 
+      color-space="sRGB"
+      renderer="colorManagement:true,physicallyCorrectLights,antialias:true"
+      vr-mode-ui="enabled:false">
       <a-assets-item>
         <video id="video1" src="voeux.mp4" preload="auto" playsinline webkit-playsinline autoplay crossorigin="anonymous"></video>
 
